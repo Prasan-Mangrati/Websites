@@ -17,7 +17,7 @@ const seekbarOverlap = document.getElementById("seekbarOverlap")
 let pause = false
 
 async function getSongs() {
-    let a = await fetch("http://github.com/prasan-mangrati/Websites/Songs/")
+    let a = await fetch("https://github.com/Prasan-Mangrati/Websites/tree/main/Songs)
     let response = await a.text();
 
 
