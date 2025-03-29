@@ -1,0 +1,47 @@
+:root{
+    --bgcolor: rgb(44,44,44);
+}
+
+
+sl-input::part(base) {
+    background-color: rgb(44, 44, 44);
+  
+}
+
+sl-input::part(input) {
+   color: white;
+}
+
+sl-input::part(prefix)
+{
+    background-color: var(--bgcolor);
+   
+    
+}
+
+sl-input::part(base):hover{
+    background-color: rgb(70, 70, 73);
+    --bgcolor:rgb(70,70,73);
+    
+}
+
+sl-icon::part(base)
+{
+    background-color: blue;
+    color: blue;
+}
+
+
+  ::-webkit-scrollbar{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    
+  }
+
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: rgba(102, 96, 102, 0.507);
+    border-radius: 10px;
+  }
+
+

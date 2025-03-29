@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.0/cdn/themes/light.css" />
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/test.css">
+</head>
+
+<body class="bg-black overflow-y-hidden">
+    <nav class="text-white flex justify-center px-5 my-5 items-center relative select-none">
+        <div class="logo cursor-pointer mr-auto">
+            <img src="src/images/logo.svg" alt="">
+        </div>
+        <div class="center flex absolute left-0 right-0 justify-center">
+            <div class="search group flex justify-between w-fit border-2 border-transparent cursor-text bg-[rgb(25,25,25)] hover:bg-[rgb(44,44,44)] transition-all duration-1000 text-white rounded-full px-5 py-2 items-center focus-within:border-white">
+                <img src="src/images/search.svg" width="32" alt="">
+                <input type="text" class="px-2 font-normal w-[50%] focus:outline-none"
+                    placeholder="What do you want to play?">
+                <div class="flex gap-3 cursor-pointer">
+                    <div class="opacity-0 group-hover:opacity-100 group-hover:bg-[rgb(45,45,45)] transition-opacity duration-700 flex gap-5 items-center">
+                        <span class="border-2 px-2 py-0.5 rounded-lg">Ctrl</span>
+                        <span class="border-2 px-2 py-0.5 rounded-lg">K</span>
+                    </div>
+                    <div class="divider text-3xl flex items-center">|</div>
+                    <img src="src/images/browse.svg" width="32" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-5 items-center cursor-pointer w-fit">
+            <div class="install-app flex gap-2 cursor-pointer">
+                <img src="src/images/download.svg" class="w-5" alt="">
+                <a class="hover:text-[rgb(230,230,230)] cursor-pointer">Install App</a>
+            </div>
+            <div class="notification cursor-pointer">
+                <img src="src/images/bell.svg" alt="">
+            </div>
+            <div class="profile">
+                <img class="rounded-full w-10 h-10"
+                    src="https://i.scdn.co/image/ab67757000003b82bd8bccfff460ae4db4294805" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <main class="grid grid-cols-[1fr_3fr] gap-2 z-[1]">
+        <div class="left ml-5 bg-[rgba(29,28,28,0.68)] rounded-lg p-5 text-wrap h-[90vh] sticky left-0 top-0">
+            <div class="top flex flex-col gap-5">
+                <div class="flex items-center">
+                    <div class="header flex gap-5">
+                        <span><img class="w-7" src="src/images/library.svg" alt=""></span>
+                        <span class="text-[rgb(211,206,206)] text-xl font-bold">Your Library</span>
+                    </div>
+
+                </div>
+
+                <div class="cursor-pointer flex">
+                    <button
+                        class="text-white text-sm cursor-pointer px-3 py-1 bg-[rgb(49,48,48)] rounded-full hover:bg-[rgb(60,60,60)]">Artists</button>
+                    <button
+                        class="text-white text-sm  cursor-pointer px-3 py-1 bg-[rgb(49,48,48)] rounded-full hover:bg-[rgb(60,60,60)]">Albums</button>
+                </div>
+                <div class="flex justify-between items-center">
+                    <img class="cursor-pointer hover:bg-[rgb(49,49,49)] p-0.5 rounded-full" src="src/images/search.svg"
+                        alt="">
+                    <div class="recents flex text-white font-extralight hover:font-normal cursor-pointer">
+                        <span>Recents</span>
+                        <img src="src/images/list.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- <div class="card rounded-lg p-2 text-white flex items-center gap-5 hover:bg-[rgb(46,45,45)] cursor-pointer">
+                        <div class="profile">
+                            <img class="rounded-full w-12 h-12" src="https://i.scdn.co/image/ab67757000003b82bd8bccfff460ae4db4294805" alt="">
+                        </div>
+                        <div class="name text-xl text-green-500">
+                            Prasan Mangrati
+                            <div class="footer text-sm font-extralight text-white">
+                                Artist
+                            </div>
+                        </div>
+                   </div>
+                   <div class="card rounded-lg p-2 text-white flex items-center gap-5 hover:bg-[rgb(46,45,45)] cursor-pointer">
+                        <div class="profile">
+                            <img class="rounded-full w-12 h-12" src="https://upload.wikimedia.org/wikipedia/en/5/5c/Moral_of_the_Story_-_Ashe.jpg" alt="">
+                        </div>
+                        <div class="name text-xl text-green-500">
+                            Moral of the Story
+                            <div class="footer text-sm font-extralight text-white flex gap-2 items-center">
+                                Single <span class=""> . </span> <span>Ashe</span>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="card rounded-lg p-2 text-white flex items-center gap-5 hover:bg-[rgb(46,45,45)] cursor-pointer">
+                        <div class="profile">
+                            <img class="rounded-full w-12 h-12" src="https://akm-img-a-in.tosshub.com/lingo/hrb/images/story/202412/6773cdd0e9be7-gini-315611477-16x9.png" alt="">
+                        </div>
+                        <div class="name text-xl text-green-500">
+                            Gini
+                            <div class="footer text-sm font-extralight text-white">
+                                Artist
+                            </div>
+                        </div>
+                   </div>
+                   <div class="card rounded-lg p-2 text-white flex items-center gap-5 hover:bg-[rgb(46,45,45)] cursor-pointer">
+                        <div class="profile">
+                            <img class="rounded-full w-12 h-12" src="https://i.scdn.co/image/ab67757000003b82bd8bccfff460ae4db4294805" alt="">
+                        </div>
+                        <div class="name text-xl text-green-500">
+                            St Louis, Missorui
+                            <div class="footer text-sm font-extralight text-white">
+                                Ep . Josuha Golden
+                            </div>
+                        </div>
+                   </div> -->
+                <div class="songList text-white h-[70vh] overflow-y-scroll">
+                    <ul class="">
+
+                        <!-- <li class="rounded-xl p-5 text-lg hover:bg-[rgba(48,47,47,0.56)] hover:playbutton cursor-pointer flex gap-2 h-[30%]"><img class="invert" src="src/images/music.svg" alt=""><span>Ed Sheeran Perfect</span><div class="ml-auto"><img class="invert ml-auto hover:opacity-100" src="src/images/play.svg" alt=""></div></li> -->
+                    </ul>
+                </div>
+
+            </div>
+            <!-- <button id="addArtistButton" class="text-white fixed bottom-5 rounded-full px-5 py-2 cursor-pointer hover:bg-blue-700 active:bg-blue-600 bg-blue-600 text-lg font-bold" >Add Artist</button> -->
+        </div>
+        <div class="center select-none relative bg-[rgba(29,28,28,0.68)] rounded-lg hover:underline px-10 py-5 h-[90vh]">
+            <h2 class="text-2xl font-extrabold hover:underline cursor-pointer text-white">Spotify Playlists</h2>
+            <div class="music-cards mt-20 grid grid-cols-[repeat(auto-fill,_minmax(170px,_1fr))] gap-5 ">
+                <div class="card text-white flex flex-col hover:bg-[rgba(41,40,40,0.71)] p-3 rounded-sm cursor-pointer">
+                    <img width="170" class="rounded-sm"
+                        src="https://s.mxmcdn.net/images-storage/albums4/0/6/7/6/7/7/84776760_500_500.jpg" alt="">
+                    <span>Ekadeshma</span>
+                    <span class="font-extralight">Latest Release . Single</span>
+                </div>
+                <div class="card text-white flex flex-col hover:bg-[rgb(40,40,40)] p-3 rounded-sm cursor-pointer">
+                    <img width="170" class="rounded-sm"
+                        src="https://s.mxmcdn.net/images-storage/albums4/0/6/7/6/7/7/84776760_500_500.jpg" alt="">
+                    <span>Ekadeshma</span>
+                    <span class="font-extralight">Latest Release . Single</span>
+                </div>
+
+            </div>
+
+            <div class="playbar select-none absolute bottom-0 w-[95%] text-white bg-[rgba(58,56,56,0.58)] py-2 pb-3 rounded-xl">
+                <div id="playingSong" class="text-center text-xl"></div>
+                <div class="flex justify-center cursor-pointer my-2">
+                        <img id="previousButton" class="previous" src="src/images/icons/previous.svg" alt="">
+                        <img id="playButton" class="play " src="src/images/icons/play.svg" alt="">
+                        <img id="pauseButton" class="pause hidden " src="src/images/icons/pause.svg" alt="">
+                        <img id="nextButton" class="next" src="src/images/icons/next.svg" alt="">
+                        <div class="absolute right-0 mr-[5%] flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="mute" class=" transition-all duration-500"
+                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                data-src="https://cdn.hugeicons.com/icons/volume-high-solid-standard.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#ffffff">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.3594 3.34172C14.6002 3.47318 14.75 3.72565 14.75 4V20C14.75 20.2744 14.6002 20.5268 14.3594 20.6583C14.1186 20.7898 13.8252 20.7792 13.5944 20.6309L6.77972 16.25H4C2.48122 16.25 1.25 15.0188 1.25 13.5V10.5C1.25 8.98122 2.48122 7.75 4 7.75H6.77972L13.5944 3.36912C13.8252 3.22076 14.1186 3.21025 14.3594 3.34172Z"
+                                    fill="#ffffff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.3934 8.20497C16.8325 7.86997 17.46 7.95433 17.795 8.39341C18.5518 9.38533 19 10.6417 19 12C19 13.3583 18.5518 14.6146 17.795 15.6066C17.46 16.0456 16.8325 16.13 16.3934 15.795C15.9543 15.46 15.87 14.8325 16.205 14.3934C16.699 13.746 17 12.9149 17 12C17 11.0851 16.699 10.254 16.205 9.60658C15.87 9.1675 15.9543 8.53998 16.3934 8.20497Z"
+                                    fill="#ffffff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.3247 6.26245C19.7321 5.8895 20.3646 5.91738 20.7376 6.32472C22.1408 7.8573 23 9.83243 23 12C23 14.1676 22.1408 16.1427 20.7376 17.6753C20.3646 18.0826 19.732 18.1105 19.3247 17.7376C18.9174 17.3646 18.8895 16.732 19.2625 16.3247C20.3608 15.1251 21 13.621 21 12C21 10.379 20.3609 8.87497 19.2625 7.67529C18.8895 7.26796 18.9174 6.6354 19.3247 6.26245Z"
+                                    fill="#ffffff"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" id="unmute"
+                                class="hidden transition-all duration-500" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" data-src="https://cdn.hugeicons.com/icons/volume-mute-02-solid-standard.svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="#ffffff">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289L20 10.5858L21.2929 9.29289C21.6834 8.90237 22.3166 8.90237 22.7071 9.29289C23.0976 9.68342 23.0976 10.3166 22.7071 10.7071L21.4142 12L22.7071 13.2929C23.0976 13.6834 23.0976 14.3166 22.7071 14.7071C22.3166 15.0976 21.6834 15.0976 21.2929 14.7071L20 13.4142L18.7071 14.7071C18.3166 15.0976 17.6834 15.0976 17.2929 14.7071C16.9024 14.3166 16.9024 13.6834 17.2929 13.2929L18.5858 12L17.2929 10.7071C16.9024 10.3166 16.9024 9.68342 17.2929 9.29289Z"
+                                    fill="#ffffff"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.3594 3.34172C14.6002 3.47318 14.75 3.72565 14.75 4V20C14.75 20.2744 14.6002 20.5268 14.3594 20.6583C14.1186 20.7898 13.8252 20.7792 13.5944 20.6309L6.77972 16.25H4C2.48122 16.25 1.25 15.0188 1.25 13.5V10.5C1.25 8.98122 2.48122 7.75 4 7.75H6.77972L13.5944 3.36912C13.8252 3.22076 14.1186 3.21025 14.3594 3.34172Z"
+                                    fill="#ffffff"></path>
+                            </svg>
+                        </div>
+                    </div>
+                
+                <div class="bottom flex items-center relative w-full">
+                    <div id="currentSongTime" class="absolute left left-5">00:00</div>
+                    <div class="seekbar w-full flex flex-col items-center justify-center">
+                        <input type="range" id="seekbar" class="z-10 relative seekbar w-[90%] bg-green-500 appearance-none rounded-full h-2" min="0" max="1000" value="0">
+                        <!-- <div id="seekbarOverlap" class="left-[5%] max-w-[90%] h-2 rounded-full absolute bg-blue-50"></div> -->
+                        <!-- <div id="seekbarProgress" class="w-0 h-full bg-green-500 top-0 left-0 transition-all"></div> -->
+                        <!-- <div id="seekCircle" class=" bg-white w-2 h-2.5 rounded-full transition-all duration-75"></div> -->
+                    </div>
+                    <div id="currentSongDuration" class="right absolute right-5">00:00</div>
+                </div>
+            </div>
+        </div>
+        <div class="right  bg-[rgba(29,28,28,0.68)] rounded-lg"></div>
+    </main>
+    <script src="script.js"></script>
+    <!-- <script src="play.js" defer></script> -->
+</body>
+
+</html>
